@@ -9,7 +9,10 @@
     <linkfile src="wrimg.sh" dest="rpi4-wrimg.sh" />
   </project>
   <project path="device/brcm/rpi4-kernel" name="raspberry-vanilla/android_device_brcm_rpi4-kernel" remote="github" revision="android-16.0" />
-  <project path="vendor/brcm" name="raspberry-vanilla/proprietary_vendor_brcm" remote="github" revision="android-16.0" />
+
+  <!-- Aananth's custom vendor implementation -->
+  <!-- <project path="vendor/brcm" name="raspberry-vanilla/proprietary_vendor_brcm" remote="github" revision="android-16.0" /> -->
+  <project path="vendor/brcm" name="android_vendor_brcm" remote="aananthcn" revision="android-16.0" submodules="true" />
 
   <!-- rpi5 and rpi5-kernel overridden with Aananth's forks (9 Apr 2026) -->
   <remove-project name="raspberry-vanilla/android_device_brcm_rpi5" />
