@@ -15,15 +15,20 @@
   <project path="vendor/brcm" name="android_vendor_brcm" remote="aananthcn" revision="android-16.0" submodules="true" />
 
   <!-- rpi5 and rpi5-kernel overridden with Aananth's forks (9 Apr 2026) -->
-  <remove-project name="raspberry-vanilla/android_device_brcm_rpi5" />
   <project path="device/brcm/rpi5" name="android_device_brcm_rpi5"
            remote="aananthcn" revision="android-16.0" >
     <linkfile src="mkimg.sh" dest="rpi5-mkimg.sh" />
     <linkfile src="wrimg.sh" dest="rpi5-wrimg.sh" />
   </project>
-  <remove-project name="raspberry-vanilla/android_device_brcm_rpi5-kernel" />
   <project path="device/brcm/rpi5-kernel" name="android_device_brcm_rpi5-kernel"
            remote="aananthcn" revision="android-16.0" />
+
+  <!-- Car Launcher overridden with Aananth's fork -->
+  <remove-project name="platform/packages/apps/Car/Launcher" />
+  <project path="packages/apps/Car/Launcher"
+           name="car-launcher"
+           remote="aananthcn"
+           revision="main" />
 
   <!-- Audio -->
   <project path="external/alsa-lib" name="raspberry-vanilla/android_external_alsa-lib" remote="github" revision="android-16.0" />
